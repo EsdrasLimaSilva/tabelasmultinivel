@@ -1,0 +1,157 @@
+:root {
+    --white: rgb(255, 255, 255);
+    --black: rgb(14, 14, 39);
+    --gray: rgb(245, 241, 241);
+    --blue-opaque: rgb(219, 226, 233);
+    --blue: rgb(0, 106, 255);
+    --action: rgb(32, 95, 204);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+    text-transform: uppercase !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--gray);
+}
+
+body {
+    padding: 8px;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 320px 1fr 320px;
+    gap: 8px;
+    height: 100%;
+}
+
+.active {
+    background-color: var(--action) !important;
+    color: white !important;
+}
+
+#address-container, #mmu-container, #ram-container {
+    background-color: var(--blue-opaque);
+    height: fit-content;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 1px #00000030;
+}
+
+#address-container h1 , #mmu-container h1 , #ram-container h1 {
+    color: var(--black);
+    font-size: 1.4rem;
+    text-align: center;
+    font-style: italic;
+}
+
+#address-container, #ram-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+   
+}
+
+#address-container > ul, #ram-container > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#address-container > ul > li  {
+    font-size: 1.2rem;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.1s;
+    user-select: none;
+}
+
+#ram-container > ul > li {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--black);
+    align-items: center;
+    gap: 8px;
+}
+
+#ram-container > ul > li > span {
+    background-color: var(--white);
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.pd-active, .pd-active > span,
+.l2-active, .l2-active > span,
+.result-active > span{
+    background-color: var(--action) !important;
+    color: var(--white) !important;
+}
+
+
+#address-container > ul > li:hover {
+    transform: translateX(4px);
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#mmu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: fit-content;
+    padding: 32px;
+}
+
+#mmu-container  span {
+    background-color: var(--white);
+    display: block;
+    font-size: 1.2rem;
+    padding: 8px;
+    width: 200px;
+    font-weight: bold;
+    color: var(--black);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#mmu-container  span > h2 {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#mmu-container  span > p {
+    font-size: 1.5rem;
+}
+
+#register-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#register-container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
